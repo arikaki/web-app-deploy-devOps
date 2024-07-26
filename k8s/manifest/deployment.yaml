@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-app-deploy
+  labels:
+    app: web-app-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-app-deploy
+  template:
+    metadata:
+      labels:
+        app: web-app-deploy
+    spec:
+      containers:
+      - name: web-app-deploy
+        image: sairishab/web-app-deploy:v1
+        ports:
+        - containerPort: 8080
