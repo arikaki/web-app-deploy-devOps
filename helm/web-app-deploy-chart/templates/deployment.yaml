@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: web-app-deploy
-        image: sairishab/web-app-deploy:v1
+        image: sairishab/web-app-deploy:{{ .Values.image.tag }}
         ports:
         - containerPort: 8080
