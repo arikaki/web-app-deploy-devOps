@@ -15,7 +15,7 @@ func TestMain(t *testing.T) {
 
 	// Record the response using httptest
 	rr := httptest.NewRecorder()
-	handler := http.FileServer(http.Dir("public"))
+	handler := http.FileServer(http.Dir("/static/public"))
 
 	// Serve the request
 	handler.ServeHTTP(rr, req)

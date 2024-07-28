@@ -7,7 +7,7 @@ import (
 
 func main() {
 	// Serve static files from the "public" directory
-	fs := http.FileServer(http.Dir("public"))
+	fs := http.FileServer(http.Dir("/static/public"))
 	http.Handle("/", fs)
 
 	// Start the server on port 8080
